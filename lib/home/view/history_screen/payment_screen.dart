@@ -65,6 +65,15 @@ class PeymentHistoryScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue[200],
+        onPressed: () {},
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+        elevation: 2.0,
+        child: const Icon(Icons.share),
+      ),
     );
   }
 }
