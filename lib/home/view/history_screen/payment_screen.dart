@@ -9,7 +9,9 @@ class PeymentHistoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+             Navigator.pop(context);
+          },
           icon: const Icon(
             Icons.arrow_back_ios,
             size: 15,
@@ -24,7 +26,7 @@ class PeymentHistoryScreen extends StatelessWidget {
         actions: [
           TextButton(
               onPressed: () {
-                Navigator.pop(context);
+               
               },
               child: Text(
                 'Clear',
