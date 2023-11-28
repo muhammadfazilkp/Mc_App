@@ -37,7 +37,7 @@ class DialogBox {
                           decoration: const InputDecoration(
                             prefixIcon: Icon(CupertinoIcons.person_fill),
                             border: OutlineInputBorder(),
-                            hintText: "Enter the Sponsorname",
+                            hintText: "Enter visitor name",
                           ),
                         ),
                         boxh,
@@ -53,7 +53,7 @@ class DialogBox {
                           decoration: const InputDecoration(
                             prefixIcon: Icon(CupertinoIcons.person_fill),
                             border: OutlineInputBorder(),
-                            hintText: "Enter the second name ",
+                            hintText: "Enter Sponsorname ",
                           ),
                         ),
                         Row(

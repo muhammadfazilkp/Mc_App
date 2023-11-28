@@ -22,9 +22,9 @@ TextEditingController lastnameController=TextEditingController();
     notifyListeners();
   }
 
-Future<List<Visitors>> getNotes() async {
+Stream<List<Visitors>> getNotes() async* {
     final box = await openBox();
-    return box.values.toList();
+    yield box.values.toList();
   }
 
    bool _switchValue = false; // Initial value

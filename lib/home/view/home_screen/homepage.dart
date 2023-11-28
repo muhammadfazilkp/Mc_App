@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                       itemBuilder: (BuildContext context, index) {
                         final user = snapshot.data![index];
                         return InkWell(
-                          onTap: () => PaymentDialogBox.show(context),
+                          onTap: () => PaymentDialogBox.show(context,user),
                           child: Card(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,

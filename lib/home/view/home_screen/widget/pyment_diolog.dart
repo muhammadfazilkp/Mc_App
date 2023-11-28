@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mc_applicaton/home/core/core.dart';
+import 'package:mc_applicaton/home/model/user_informetion.dart';
 import 'package:mc_applicaton/home/viewmodel/visitors_provider/get_visitorsdata.dart';
 import 'package:provider/provider.dart';
 
 class PaymentDialogBox {
-  static void show(BuildContext context) {
+  final user= UserModel ;
+  static void show(BuildContext context, UserModel user) {
     final formKey = GlobalKey<FormState>();
     showDialog(
       context: context,
@@ -16,16 +18,18 @@ class PaymentDialogBox {
               key: formKey,
               child: Column(
                 children: [
-                  const Align(
+                   Align(
                     alignment: Alignment.center,
-                    child: CircleAvatar(radius: 20),
+                    child: CircleAvatar(radius: 30,
+                    backgroundImage: NetworkImage(user.picture.thumbnail),
+                    ),
                   ),
                   boxh,
-                  const Align(
+                  Align(
                     alignment: Alignment.topCenter,
                     child: Text(
-                      'assertino lennfr',
-                      style: TextStyle(fontSize: 18),
+                      user.name.first,
+                      style: text,
                     ),
                   ),
                   boxh,
@@ -93,7 +97,9 @@ class PaymentDialogBox {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
                             child: Text(
                               'Cancel',
                               style: text,
