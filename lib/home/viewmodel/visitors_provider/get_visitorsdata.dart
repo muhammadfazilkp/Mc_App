@@ -27,4 +27,16 @@ Future<List<Visitors>> getNotes() async {
     return box.values.toList();
   }
 
+   bool _switchValue = false; // Initial value
+
+  bool get switchValue => _switchValue;
+
+  void buttonClick(bool value) {
+    // Toggle the switch value
+    _switchValue = !_switchValue;
+
+    // Notify listeners to update the UI
+    notifyListeners();
+  }
+
 }

@@ -21,15 +21,15 @@ class DialogBox {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          'Enter the visitor name',
-                          style: text,
+                          'Enter visitor Details',
+                          style: charactortext,
                         ),
                         boxh,
                         TextFormField(
                           controller: value.firstNameController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'enter the tittl';
+                              return 'Enter visitor name';
                             } else {
                               return null;
                             }
@@ -37,7 +37,7 @@ class DialogBox {
                           decoration: const InputDecoration(
                             prefixIcon: Icon(CupertinoIcons.person_fill),
                             border: OutlineInputBorder(),
-                            hintText: "Add a new task tittl",
+                            hintText: "Enter the Sponsorname",
                           ),
                         ),
                         boxh,
@@ -60,7 +60,9 @@ class DialogBox {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
                                 child: Text(
                                   'Cancel',
                                   style: text,
